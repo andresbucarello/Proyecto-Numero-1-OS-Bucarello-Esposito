@@ -90,40 +90,33 @@ public class Trabajador extends Thread {
         int company = 0;
         if ("HP".equalsIgnoreCase(empresa.getNombre())) {
             company = 1;
-            System.out.println(" ########### HP ############");
-        }else{
-            System.out.println(" ########### MSI ############");
         }
 
         if (this.evaluarPosibilidadDeArmar()) {
-            // Evaluar si el siguiente capítulo debe ser un plot twist antes de incrementar
-            // numChapters
-            System.out.println("Trigger");
-            System.out.println(empresa.getComputadorasNormales());
-            System.out.println(ImportantConstants.frecuenciaTG[company]);
+            // Evaluar si el siguiente computador debe ser con tarjeta grafica antes de incrementar
+
             boolean siguienteComputadoraTG = (empresa.getTriggerTG() == ImportantConstants.frecuenciaTG[company]);
             
-            System.out.println(siguienteComputadoraTG);
 
             if (siguienteComputadoraTG) {
                 for (int i = 0; i < empresa.getAlmacen().getComponentes().length - 1; i++) {
-                    empresa.getAlmacen().getComponentes()[i] = Math.max(0, empresa.getAlmacen().getComponentes()[i] - ImportantConstants.composicionDeComputadoras[company][i]);
+                    empresa.getAlmacen().getComponentes()[i] = Math.max(0, 
+                            empresa.getAlmacen().getComponentes()[i] - ImportantConstants.composicionDeComputadoras[company][i]);
                 }
-                System.out.println("Supuestamente soy computadora TG");
-                System.out.println(empresa.getTriggerTG());
+
+
                 empresa.setComputadorasTG(empresa.getComputadorasTG() + 1);
                 empresa.setTriggerTG(0);
             } else {
                 // Computadora regular
                 
                 for (int i = 0; i < empresa.getAlmacen().getComponentes().length - 2; i++) {
-                    empresa.getAlmacen().getComponentes()[i] = Math.max(0, empresa.getAlmacen().getComponentes()[i] - ImportantConstants.composicionDeComputadoras[company][i]);
+                    empresa.getAlmacen().getComponentes()[i] = Math.max(0, 
+                            empresa.getAlmacen().getComponentes()[i] - ImportantConstants.composicionDeComputadoras[company][i]);
                 }
-                System.out.println("Soy computadora normal");
-                System.out.println(empresa.getTriggerTG());
+
                 empresa.setComputadorasNormales(empresa.getComputadorasNormales() + 1);
                 empresa.setTriggerTG(empresa.getTriggerTG() + 1);
-                System.out.println(empresa.getTriggerTG());
             }
             this.getAlmacen().getComponentes()[5] += 1;
         }
@@ -137,18 +130,18 @@ public class Trabajador extends Thread {
             company = 1;
         }
 
-        // Requisito minimo para un cap (cap regular)
+        // Requisito minimo para una comp (ccomputadora normal)
         for (int i = 0; i < empresa.getAlmacen().getComponentes().length - 2; i++) {
-            // Si no hay la cantidad minima entonces el assembler no puede tranbajar
+            // Si no hay la cantidad minima entonces el ensamblador no puede tranbajar
             if (empresa.getAlmacen().getComponentes()[i] < ImportantConstants.composicionDeComputadoras[company][i]) {
                 return false;
             }
         }
-        // si es plottwist
+        // si es Tarjeta grafica
         boolean siguienteComputadoraTG = (empresa.getComputadorasNormales() == ImportantConstants.frecuenciaTG[company]);
 
         if (siguienteComputadoraTG) {
-            // Verifica si NO hay para hacer un plottwist
+            // Verifica si NO hay para hacer una tarjeta grafica
             if (empresa.getAlmacen().getComponentes()[4] < ImportantConstants.composicionDeComputadoras[company][4]) {
                 return false;
             }

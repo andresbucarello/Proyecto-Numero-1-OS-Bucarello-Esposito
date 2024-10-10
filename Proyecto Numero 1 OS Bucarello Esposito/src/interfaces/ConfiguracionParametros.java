@@ -23,7 +23,7 @@ import javax.swing.UIManager;
 
 /**
  *
- * @author Erika A. Hernández Z.
+ * @author andres
  */
 public class ConfiguracionParametros extends javax.swing.JFrame {
 
@@ -104,17 +104,6 @@ public class ConfiguracionParametros extends javax.swing.JFrame {
         return config;
     }
 
-    private void cartoonPlayMusic(String path) {
-        try {
-            URL url = this.getClass().getResource(path);
-            AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioIn);
-            clip.start();
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-            e.printStackTrace();
-        }
-    }
 
     private int countNonNullEmployees(Trabajador[] employees) {
         int count = 0;

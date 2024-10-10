@@ -90,7 +90,7 @@ public class Director extends Trabajador{
 
             Empresa empresa = Helpers.getEmpresa(this.getEmpresa());
 
-            // Enviamos los capitulos
+            // Enviamos los computadores
             empresa.getAlmacen().resetComputadoras(); // <-
             
             Helpers.calcularIngresos(this.getEmpresa());

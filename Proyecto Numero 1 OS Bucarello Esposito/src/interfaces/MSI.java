@@ -24,7 +24,7 @@ import javax.swing.UIManager;
 
 /**
  *
- * @author Erika A. Hernández Z.
+ * @author andres
  */
 public class MSI extends javax.swing.JFrame {
 
@@ -132,11 +132,11 @@ public class MSI extends javax.swing.JFrame {
             public void run() {
                 while (true) {
                     try {
-                        // Ejecutar las actualizaciones de la UI en el EDT
+                        // Ejecutar las actualizaciones
                         SwingUtilities.invokeLater(new Runnable() {
                             @Override
                             public void run() {
-                                // Aquí van tus actualizaciones de la UI
+                                // Aquí van tus actualizaciones
                                 almacenPB
                                         .setText(String.valueOf(app.getEmpresaMSI().getAlmacen().getComponentes()[0]));
                                 almacenCPU
@@ -181,7 +181,7 @@ public class MSI extends javax.swing.JFrame {
                             }
                         });
 
-                        // Pausar el hilo separado, no el EDT
+                        // Pausar el hilo
                         Thread.sleep(app.getDuracionDelDia() / 48);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -235,18 +235,6 @@ public class MSI extends javax.swing.JFrame {
 
         // Se convierte a cadena y se añade 'K'
         return rounded + "K";
-    }
-
-    private void cartoonPlayMusic(String path) {
-        try {
-            URL url = this.getClass().getResource(path);
-            AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioIn);
-            clip.start();
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-            e.printStackTrace();
-        }
     }
 
     /**

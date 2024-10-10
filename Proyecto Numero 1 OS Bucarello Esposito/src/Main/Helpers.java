@@ -45,9 +45,7 @@ public class Helpers {
                     }
                 }
             }
-        } else {
-            System.out.println("No hay empleados para eliminar.");
-        }
+        } 
     }
 
     private Trabajador[] getTrabajadoresDeArea(Empresa empresa, int workerType) {
@@ -97,9 +95,7 @@ public class Helpers {
                     break;
                 }
             }
-        } else {
-            System.out.println("Se ha alcanzado el número máximo de empleados.");
-        }
+        } 
     }
 
     public static Empresa getEmpresa(String empresa) {
@@ -115,7 +111,7 @@ public class Helpers {
 
         int earning = (empresa.getComputadorasNormales() * ImportantConstants.ingresosPorComputadora[nroEmpresa][0]) + (empresa.getComputadorasTG() * ImportantConstants.ingresosPorComputadora[nroEmpresa][1]);
         empresa.setIngresos(empresa.getIngresos()+earning);
-        System.out.println("");
+
     }
 
     public static void calcularGanancias(String nombreEmpresa) {

@@ -3,18 +3,18 @@ DayDuration=1000
 Deadline=30
 
 [Empresa MSI]
-ProductoresPB=1
-ProductoresCPU=2
+ProductoresPB=5
+ProductoresCPU=7
 ProductoresRAM=3
-ProductoresFA=4
-ProductoresTG=9
-Ensambladores=1
+ProductoresFA=1
+ProductoresTG=1
+Ensambladores=3
 
 [Empresa HP]
-ProductoresPB=1
-ProductoresCPU=2
-ProductoresRAM=3
-ProductoresFA=4
-ProductoresTG=5
-Ensambladores=1
+ProductoresPB=3
+ProductoresCPU=3
+ProductoresRAM=1
+ProductoresFA=1
+ProductoresTG=2
+Ensambladores=4
 

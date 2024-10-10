@@ -109,8 +109,9 @@ public class ManejadorGraficos {
     
     public void updateChartData() {
         // Se obtienen las nuevas ganancias
-        double gananciasMSI = app.getEmpresaMSI().getGanancias(); 
-        double gananciasHP = app.getEmpresaMSI().getGanancias();
+        double gananciasMSI = -app.getEmpresaMSI().getCostos()+app.getEmpresaMSI().getIngresos(); 
+        double gananciasHP = -app.getEmpresaHP().getCostos()+app.getEmpresaHP().getIngresos(); 
+
         int newTimePoint = computadorasMSI.getItemCount() + 1;
 
         computadorasMSI.addOrUpdate(newTimePoint, gananciasMSI);

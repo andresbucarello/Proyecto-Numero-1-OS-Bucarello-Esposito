@@ -31,7 +31,7 @@ import org.jfree.chart.plot.PlotOrientation;
 
 /**
  *
- * @author Erika Hernández
+ * @author andres
  */
 public class Dashboard extends javax.swing.JFrame {
 
@@ -63,9 +63,9 @@ public class Dashboard extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(false);
-        //JPanelJChart.setLayout(new java.awt.BorderLayout());
-        //JPanelJChart.add(app.getChartManager().getChartPanel(), java.awt.BorderLayout.CENTER);
-        //JPanelJChart.validate();
+        JPanelJChart.setLayout(new java.awt.BorderLayout());
+        JPanelJChart.add(app.getChartManager().getChartPanel(), java.awt.BorderLayout.CENTER);
+        JPanelJChart.validate();
         this.start();
     }
 
@@ -645,17 +645,6 @@ public class Dashboard extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
 
-    private void cartoonPlayMusic(String path) {
-        try {
-            URL url = this.getClass().getResource(path);
-            AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioIn);
-            clip.start();
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-            e.printStackTrace();
-        }
-    }
     private void btn_nueva_rutaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_nueva_rutaMouseClicked
         // TODO add your handling code here:
         HP v2 = new HP();

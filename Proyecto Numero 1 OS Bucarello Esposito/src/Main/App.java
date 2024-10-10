@@ -44,7 +44,7 @@ public class App {
         getEmpresaHP().start();
         getEmpresaMSI().start();
         manejadorGraficos = new ManejadorGraficos();
-        System.out.println("1");
+
 
 
         Dashboard home = new Dashboard();
