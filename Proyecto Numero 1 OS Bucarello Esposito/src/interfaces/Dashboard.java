@@ -525,7 +525,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Noteworthy", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Parámetros");
+        jLabel7.setText("Configuracion");
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel7MouseClicked(evt);
@@ -541,7 +541,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(icono4)
                 .addGap(32, 32, 32)
                 .addComponent(jLabel7)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         btn_nuevo_almacenLayout.setVerticalGroup(
             btn_nuevo_almacenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

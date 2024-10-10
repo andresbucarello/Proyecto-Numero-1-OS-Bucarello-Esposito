@@ -6,7 +6,7 @@ package Main;
 
 import Clases.Empresa;
 import interfaces.Dashboard;
-import Interfaces.ManejadorGraficos;
+import interfaces.ManejadorGraficos;
 /**
  *
  * @author andresbucarello

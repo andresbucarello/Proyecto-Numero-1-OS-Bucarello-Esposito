@@ -1,0 +1,20 @@
+[Parametros Generales]
+DayDuration=1000
+Deadline=30
+
+[Empresa MSI]
+ProductoresPB=1
+ProductoresCPU=2
+ProductoresRAM=3
+ProductoresFA=4
+ProductoresTG=9
+Ensambladores=1
+
+[Empresa HP]
+ProductoresPB=1
+ProductoresCPU=2
+ProductoresRAM=3
+ProductoresFA=4
+ProductoresTG=5
+Ensambladores=1
+

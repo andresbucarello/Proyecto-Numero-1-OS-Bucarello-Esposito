@@ -101,7 +101,7 @@ public class Trabajador extends Thread {
             System.out.println("Trigger");
             System.out.println(empresa.getComputadorasNormales());
             System.out.println(ImportantConstants.frecuenciaTG[company]);
-            boolean siguienteComputadoraTG = (empresa.getComputadorasNormales() == ImportantConstants.frecuenciaTG[company]);
+            boolean siguienteComputadoraTG = (empresa.getTriggerTG() == ImportantConstants.frecuenciaTG[company]);
             
             System.out.println(siguienteComputadoraTG);
 
